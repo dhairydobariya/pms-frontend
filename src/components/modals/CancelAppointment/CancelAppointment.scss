@@ -1,0 +1,88 @@
+@import "../../../css/variables.scss";
+
+.cancle-appointment-modal {
+  .modal-dialog {
+    justify-content: center;
+    .modal-content {
+      padding-bottom: 0;
+      position: relative;
+      width: 410px;
+      .red-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color12;
+        width: 100%;
+        height: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 15px;
+      }
+      .modal-body {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        h4 {
+          font-weight: 800;
+          font-size: 24px;
+          color: $color15;
+          margin-bottom: 6px;
+        }
+        p {
+          width: 316px;
+          font-weight: 400;
+          font-size: 16px;
+          color: $color5;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+        .appointment-cancle-btn {
+          width: 223px;
+          height: 48px;
+          border: 1px solid $color17;
+          background-color: $color1;
+          border-radius: 10px;
+          padding: 12px 14px;
+          margin-right: 15px;
+          font-weight: 600;
+          font-size: 18px;
+          color: $color10;
+          transition: all 0.5s;
+          &:hover {
+            background: $color12;
+            color: $color1;
+          }
+        }
+        .appointment-submit-btn {
+          width: 223px;
+          height: 48px;
+          background: $color2;
+          border: none;
+          border-radius: 10px;
+          padding: 12px 14px;
+          font-weight: 600;
+          font-size: 18px;
+          color: $color1;
+          transition: all 0.5s;
+          &:hover {
+            background: $color9;
+            color: $color5;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cancle-appointment-modal {
+    .modal-dialog {
+      .modal-content {
+        width: 100%;
+        .modal-body {
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

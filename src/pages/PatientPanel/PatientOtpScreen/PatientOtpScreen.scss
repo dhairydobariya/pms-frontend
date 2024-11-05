@@ -1,0 +1,69 @@
+@import "../../../css/variables.scss";
+
+.otp-section {
+  .otp-card {
+    background: $color1;
+    box-shadow: 0px 0px 15px 0px #0000000a;
+    border: 1px solid $color8;
+    border-radius: 15px;
+    padding: 50px;
+    width: 75%;
+    .otp-input-group {
+      .otp-input {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        margin-right: 25px;
+        border: 1px solid $color6;
+        border-radius: 10px;
+        &:focus {
+          border-color: $color6;
+          outline: none;
+        }
+      }
+      .is-invalid {
+        border: 1px solid $color12 !important;
+      }
+    }
+    .otp-title {
+      font-weight: 600;
+      font-size: 34px;
+      color: $color15;
+    }
+    .otp-sub-title {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color5;
+    }
+    .main-link {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color13;
+    }
+    .otp-btn {
+      margin-top: 32px;
+      margin-bottom: 22px;
+      background-color: $color2;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 20px;
+      color: $color1;
+    }
+    .otp-time {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color15;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .otp-section {
+    .otp-card {
+      width: 100%;
+    }
+  }
+}

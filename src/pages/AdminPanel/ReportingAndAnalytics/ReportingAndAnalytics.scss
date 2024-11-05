@@ -1,0 +1,522 @@
+@import "../../../css/variables.scss";
+
+.profile-header {
+  background-color: $color1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+
+  .breadcrumb {
+    margin-bottom: 0;
+    background: #0eabeb08;
+    border-radius: 30px;
+    padding: 14px 20px;
+    border: 0.3px solid #d9d9d9;
+    display: inline-flex;
+    .breadcrumb-item {
+      font-size: 18px;
+      &.active {
+        color: $color2;
+        font-weight: 400;
+      }
+    }
+
+    .breadcrumb-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, ">");
+  }
+
+  .search-container {
+    position: relative;
+    width: 335px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+    .form-control:focus {
+      background-color: $color9;
+      border-color: transparent;
+      border-radius: 50px;
+      outline: 0;
+      box-shadow: none;
+    }
+
+    input {
+      background-color: $color9;
+      padding: 13px 50px;
+      border-radius: 50px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .dropdown-toggle {
+      &::after {
+        display: inline-block;
+      }
+    }
+
+    .btn-link {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color6;
+      text-decoration: none;
+    }
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .btn-link {
+    text-decoration: none;
+  }
+
+  .user-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color16;
+  }
+
+  .user-role {
+    font-weight: 500;
+    font-size: 12px;
+    color: $color5;
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      background-color: $color1;
+      box-shadow: 0px 0px 40px 0px #00000026;
+      border: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      .dropdown-item {
+        padding: 8px 10px;
+        background-color: $color1;
+        color: $color6;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        &.active,
+        &:active,
+        &:focus {
+          background-color: $color2;
+          color: $color1;
+        }
+
+        &:hover {
+          background-color: $color2;
+          color: $color1;
+        }
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
+
+  .notification-dropdown {
+    .notification-toggle {
+      padding: 0;
+      border: none;
+      background: none;
+
+      .notification-icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .notification-menu {
+      width: 500px;
+      max-height: 500px;
+      overflow-y: auto;
+      padding: 20px;
+      border-radius: 15px;
+
+      @media (max-width: 992px) {
+        width: 300px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+
+      .notification-header {
+        padding: 20px 0;
+        border-bottom: 1px solid #f1f1f1;
+        font-weight: 600;
+        font-size: 18px;
+        color: $color15;
+
+        .close-btn {
+          width: 22px;
+          height: 22px;
+          border: none;
+          background: $color12;
+          color: $color1;
+          border-radius: 50%;
+          font-size: 18px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .notification-item {
+        padding: 20px 0;
+        border-bottom: 1px solid #f1f1f1;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .notification-icon {
+          width: 46px;
+          height: 46px;
+          margin-right: 10px;
+        }
+
+        .notification-content {
+          flex-grow: 1;
+
+          h5 {
+            margin: 0;
+            font-weight: 500;
+            font-size: 16px;
+            color: $color15;
+          }
+
+          p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 14px;
+            color: $color6;
+          }
+        }
+
+        .notification-time {
+          font-size: 14px;
+          color: $color6;
+        }
+      }
+    }
+  }
+
+  .breadcrumb-container {
+    .btn {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $color10;
+      padding: 10px;
+      &:first-child {
+        &:active {
+          background-color: transparent;
+          border-color: transparent;
+          color: $color10;
+        }
+      }
+    }
+
+    i.bi-text-left {
+      font-size: 30px;
+    }
+  }
+}
+
+.reporting_and_analytics_page {
+  margin-top: 30px;
+
+  .people-card {
+    & > div {
+      border: 1.5px solid;
+      border-image-source: linear-gradient(
+        284.26deg,
+        #2e7793 1.04%,
+        rgba(46, 119, 147, 0) 11.62%
+      );
+      border-image-slice: 1;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+
+    .bg-light-blue {
+      background: #ecf9ff;
+    }
+  }
+
+  .repeat-card {
+    & > div {
+      border: 1.5px solid;
+      border-image-source: linear-gradient(
+        284.26deg,
+        #6633c6 1.04%,
+        rgba(46, 119, 147, 0) 11.62%
+      );
+      border-image-slice: 1;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+    .bg-light-purple {
+      background: rgba(102, 51, 198, 0.2);
+    }
+  }
+
+  .hospital-card {
+    & > div {
+      border: 1.5px solid;
+      border-image-source: linear-gradient(
+        284.26deg,
+        #8bc633 1.04%,
+        rgba(46, 119, 147, 0) 11.62%
+      );
+      border-image-slice: 1;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+    .bg-light-green {
+      background: rgba(139, 198, 51, 0.2);
+    }
+  }
+
+  .assignment-card {
+    & > div {
+      border: 1.5px solid;
+      border-image-source: linear-gradient(
+        284.26deg,
+        #9a5bd4 1.04%,
+        rgba(46, 119, 147, 0) 11.62%
+      );
+      border-image-slice: 1;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+    .bg-lighter-purple {
+      background: rgba(154, 91, 212, 0.2);
+    }
+  }
+
+  .card-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: $color15;
+  }
+
+  .card-count {
+    font-weight: 800;
+    font-size: 26px;
+    color: $color15;
+  }
+
+  .appointment_graph {
+    background-color: $color1;
+    border-radius: 15px;
+    padding: 20px;
+    .appointment_graph-title {
+      font-weight: 700;
+      font-size: 24px;
+      color: $color15;
+    }
+    .btn-unactive {
+      font-weight: 400;
+      font-size: 16px;
+      border: 0.5px solid $color7;
+      background-color: $color1;
+      color: $color6;
+    }
+    .btn-active {
+      font-weight: 600;
+      font-size: 16px;
+      background-color: $color2;
+      color: $color1;
+    }
+  }
+
+  .patients_summary_graph {
+    background-color: $color1;
+    border-radius: 15px;
+    padding: 20px;
+    .patients_summary_graph-title {
+      font-weight: 700;
+      font-size: 24px;
+      color: $color15;
+    }
+    .btn-unactive {
+      font-weight: 400;
+      font-size: 16px;
+      border: 0.5px solid $color7;
+      background-color: $color1;
+      color: $color6;
+    }
+    .btn-active {
+      font-weight: 600;
+      font-size: 16px;
+      background-color: $color2;
+      color: $color1;
+    }
+  }
+
+  .patient_count_department {
+    background-color: $color1;
+    border-radius: 15px;
+    padding: 20px;
+    .patient_count_department-title {
+      font-weight: 700;
+      font-size: 24px;
+      color: $color15;
+    }
+    .table-header {
+      th {
+        background: $color9;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      p {
+        font-weight: 600;
+        font-size: 13px;
+        color: $color15;
+      }
+    }
+    .table {
+      td {
+        font-weight: 600;
+        font-size: 14px;
+        color: $color5;
+      }
+      .table-rounded {
+        background: rgba(57, 151, 61, 0.2);
+        border-radius: 44px;
+        padding: 8px 14px;
+      }
+      .text-dark-green {
+        color: $color11;
+      }
+      span {
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .doctor_count_department {
+    background-color: $color1;
+    border-radius: 15px;
+    padding: 20px;
+    .doctor_count_department-title {
+      font-weight: 700;
+      font-size: 24px;
+      color: $color15;
+    }
+    .table-header {
+      th {
+        background: $color9;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      p {
+        font-weight: 600;
+        font-size: 13px;
+        color: $color15;
+      }
+    }
+    .table {
+      td {
+        font-weight: 600;
+        font-size: 14px;
+        color: $color5;
+      }
+      .table-blue-rounded {
+        background: rgba(14, 171, 235, 0.2);
+        border-radius: 44px;
+        padding: 8px 14px;
+      }
+      .text-light-blue {
+        color: $color2;
+      }
+      span {
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .patient_age_container {
+    background-color: $color1;
+    border-radius: 15px;
+    padding: 20px;
+    .patient_age_title {
+      font-weight: 700;
+      font-size: 24px;
+      color: $color15;
+    }
+    .rounded-circle {
+      margin-right: 12px;
+    }
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      color: $color5;
+      &.text-muted {
+        font-weight: 600;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+    .total-count-box {
+      p {
+        font-weight: 600;
+        font-size: 14px;
+        color: $color5;
+      }
+      .total-count-number {
+        font-weight: 800;
+        font-size: 24px;
+        background: linear-gradient(180deg, #5a68ff 0%, #0314c9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    .search-container {
+      width: 100% !important;
+      margin-bottom: 0px;
+    }
+    .mobile-screen {
+      display: none;
+    }
+  }
+}

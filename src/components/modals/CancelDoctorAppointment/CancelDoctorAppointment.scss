@@ -1,0 +1,228 @@
+@import "../../../css/variables.scss";
+
+.cancle-doctor-appointment-modal {
+  .modal-dialog {
+    justify-content: center;
+    .modal-content {
+      padding-bottom: 0;
+      position: relative;
+      width: 410px;
+      .red-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color12;
+        width: 100%;
+        height: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 15px;
+      }
+      .modal-body {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        h4 {
+          font-weight: 800;
+          font-size: 24px;
+          color: $color15;
+          margin-bottom: 6px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          color: $color5;
+          margin: 0 auto;
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+        .appointment-cancle-btn {
+          width: 223px;
+          height: 48px;
+          border: 1px solid $color17;
+          background-color: $color1;
+          border-radius: 10px;
+          padding: 12px 14px;
+          margin-right: 15px;
+          font-weight: 600;
+          font-size: 18px;
+          color: $color10;
+          transition: all 0.5s;
+          &:hover {
+            background: $color12;
+            color: $color1;
+          }
+        }
+        .appointment-submit-btn {
+          width: 223px;
+          height: 48px;
+          background: $color2;
+          border: none;
+          border-radius: 10px;
+          padding: 12px 14px;
+          font-weight: 600;
+          font-size: 18px;
+          color: $color1;
+          transition: all 0.5s;
+          &:hover {
+            background: $color9;
+            color: $color5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.doctor-payment-modal {
+  &.show {
+    .modal-dialog {
+      justify-content: center;
+    }
+  }
+  .modal-dialog {
+    .modal-content {
+      width: 440px;
+      .modal-header {
+        border-bottom: none;
+        .modal-title {
+          font-weight: 700;
+          font-size: 24px;
+          color: $color15;
+        }
+      }
+      .modal-body {
+        .payment-options {
+          .form-check {
+            padding-right: 1.5em;
+            .form-check-input {
+              width: 20px;
+              height: 20px;
+              border: 1.5px solid #d9d9d9;
+              float: right;
+              &:focus {
+                box-shadow: none;
+              }
+              &:checked {
+                background-color: $color1;
+                border-color: $color2;
+              }
+              &:checked[type="radio"] {
+                background-image: url("/assets/images/checked.svg");
+              }
+            }
+          }
+
+          .form-check-label {
+            font-weight: 700;
+            font-size: 18px;
+            color: $color10;
+            margin-left: 0.5rem;
+          }
+
+          input[type="radio"] {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+
+          .form-floating {
+            position: relative;
+            .form-control {
+              background: $color1;
+              border: 1px solid $color7;
+              border-radius: 14px;
+              padding: 10px 23px 8px;
+              &::placeholder {
+                color: $color6;
+                font-weight: 400;
+                font-size: 16px;
+              }
+              &:focus {
+                box-shadow: none;
+                outline: 0;
+              }
+            }
+            .form-label {
+              position: absolute;
+              top: 0;
+              left: 12px;
+              font-weight: 500;
+              font-size: 16px;
+              color: $color15;
+              transition: all 0.3s;
+            }
+            img {
+              position: absolute;
+              top: 28%;
+              right: 10px;
+            }
+          }
+          .form-floating .form-control:focus ~ .form-label,
+          .form-floating .form-control:not(:placeholder-shown) ~ .form-label {
+            top: -8px;
+            left: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            color: $color15;
+          }
+          .form-control::placeholder {
+            visibility: hidden;
+          }
+
+          .form-control:focus::placeholder,
+          .form-control:not(:placeholder-shown) {
+            visibility: visible;
+          }
+        }
+      }
+      .modal-footer {
+        .cancle-btn {
+          width: 223px;
+          height: 48px;
+          border: 1px solid $color17;
+          background-color: $color1;
+          border-radius: 10px;
+          padding: 12px 14px;
+          margin-right: 15px;
+          font-weight: 600;
+          font-size: 18px;
+          color: $color10;
+          transition: all 0.5s;
+          &:hover {
+            background: $color12;
+            color: $color1;
+          }
+        }
+        .submit-btn {
+          width: 223px;
+          height: 48px;
+          background: $color2;
+          border: none;
+          border-radius: 10px;
+          padding: 12px 14px;
+          font-weight: 600;
+          font-size: 18px;
+          color: $color1;
+          transition: all 0.5s;
+          &:hover {
+            background: $color9;
+            color: $color5;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cancle-appointment-modal {
+    .modal-dialog {
+      .modal-content {
+        width: 100%;
+        .modal-body {
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

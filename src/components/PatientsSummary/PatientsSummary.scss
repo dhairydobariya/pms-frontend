@@ -1,0 +1,53 @@
+@import "../../css/variables.scss";
+
+.summary-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: $color15;
+  margin-bottom: 30px;
+}
+
+.total-pat {
+  font-weight: 600;
+  font-size: 14px;
+  color: $color5;
+}
+
+.total-pers {
+  font-weight: 800;
+  font-size: 22px;
+  background: linear-gradient(180deg, #5a68ff 0%, #0314c9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.chart-detalis {
+  margin-left: 47px;
+  @media (max-width: 992px) {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .chart-box {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+  }
+
+  .chart-data {
+    font-weight: 600;
+    font-size: 15px;
+    color: $color5;
+  }
+
+  .total-pers-2 {
+    font-weight: 600;
+    font-size: 18px;
+    background: linear-gradient(180deg, #5a68ff 0%, #0314c9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}

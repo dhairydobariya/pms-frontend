@@ -1,0 +1,593 @@
+@import "../../../css/variables.scss";
+
+.profile-header {
+  background-color: $color1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+
+  .search-container {
+    position: relative;
+    width: 335px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+    .form-control:focus {
+      background-color: $color9;
+      border-color: transparent;
+      border-radius: 50px;
+      outline: 0;
+      box-shadow: none;
+    }
+
+    input {
+      background-color: $color9;
+      padding: 13px 50px;
+      border-radius: 50px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .dropdown-toggle {
+      &::after {
+        display: inline-block;
+      }
+    }
+
+    .btn-link {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color6;
+      text-decoration: none;
+    }
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .btn-link {
+    text-decoration: none;
+  }
+
+  .user-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color16;
+  }
+
+  .content {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: $color5;
+  }
+
+  .user-role {
+    font-weight: 500;
+    font-size: 12px;
+    color: $color5;
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      background-color: $color1;
+      box-shadow: 0px 0px 40px 0px #00000026;
+      border: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      .dropdown-item {
+        padding: 8px 10px;
+        background-color: $color1;
+        color: $color6;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        &.active,
+        &:active,
+        &:focus {
+          background-color: $color2;
+          color: $color1;
+        }
+
+        // Hover state for better UX
+        &:hover {
+          background-color: $color2;
+          color: $color1;
+        }
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.breadcrumb-container {
+  .btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: $color10;
+    padding: 10px;
+    &:first-child {
+      &:active {
+        background-color: transparent;
+        border-color: transparent;
+        color: $color10;
+      }
+    }
+  }
+
+  i.bi-text-left {
+    font-size: 30px;
+  }
+}
+
+.dashboard-main {
+  background-color: $color1;
+  border-radius: 15px;
+  margin-top: 30px;
+  padding: 40px;
+}
+
+.stat-card-1 {
+  position: relative;
+  .line-1 {
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    top: 32px;
+    right: 0;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 9px;
+    transform: rotate(-180deg);
+    background-color: #2e7793;
+  }
+}
+
+.stat-card-2 {
+  position: relative;
+  .line-2 {
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    top: 32px;
+    right: 0;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 9px;
+    transform: rotate(-180deg);
+    background: #5e5e9e;
+  }
+}
+
+.stat-card-3 {
+  position: relative;
+  .line-3 {
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    top: 32px;
+    right: 0;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 9px;
+    transform: rotate(-180deg);
+    background: #41b161;
+  }
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  background-color: $color1;
+  border-radius: 15px;
+  padding: 20px;
+  border: 0.1px solid #2e7793;
+
+  img {
+    margin-right: 16px;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: $color6;
+  }
+
+  .stat-number {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 0;
+    color: $color15;
+  }
+}
+
+.billing-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: $color15;
+}
+
+.create-btn {
+  width: 150px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: $color2;
+  font-weight: 600;
+  font-size: 17px;
+  color: $color1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pending-text {
+  font-weight: 600;
+  font-size: 18px;
+  color: $color15;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color12;
+  margin-right: 7px;
+}
+
+.table {
+  tbody {
+    tr {
+      vertical-align: baseline;
+    }
+  }
+  .bill-no {
+    font-weight: 500;
+    font-size: 12px;
+    color: $color3;
+  }
+  .patient-name {
+    font-weight: 500;
+    font-size: 12px;
+    color: $color5;
+  }
+  .paid-btn {
+    span {
+      width: 82px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #39973d1a;
+      font-weight: 600;
+      font-size: 13px;
+      color: $color11;
+      border-radius: 30px;
+      text-align: center;
+    }
+  }
+  .unpaid-btn {
+    span {
+      width: 82px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e11d291a;
+      font-weight: 600;
+      font-size: 13px;
+      color: $color12;
+      border-radius: 30px;
+      text-align: center;
+    }
+  }
+  .action-btn {
+    text-align: center;
+  }
+}
+
+.table > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+
+.view-btn {
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  color: $color13;
+}
+
+.appo-card {
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: $color1;
+  border: none;
+
+  .appo-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: $color15;
+  }
+
+  .onsite {
+    width: 82px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5678e91a;
+    font-weight: 600;
+    font-size: 13px;
+    color: $color13;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .online {
+    width: 82px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffc3131a;
+    font-weight: 600;
+    font-size: 13px;
+    color: $color14;
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .appo-details {
+    margin-top: 20px;
+    .appo-details-title {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color4;
+    }
+    .appo-details-subtitle {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color5;
+    }
+  }
+}
+
+.patients-card {
+  .card-body {
+    .btn-group {
+      .btn {
+        &:hover {
+          background-color: #35b2e4;
+          color: $color1;
+        }
+      }
+      .btn-primary {
+        background-color: $color2 !important;
+        font-weight: 400;
+        font-size: 16px;
+        color: $color1;
+        border: none;
+      }
+      .btn-outline-primary {
+        font-weight: 400;
+        font-size: 16px;
+        color: $color6;
+        border: none;
+      }
+    }
+  }
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+.notification-dropdown {
+  .notification-toggle {
+    padding: 0;
+    border: none;
+    background: none;
+
+    .notification-icon {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .notification-menu {
+    width: 500px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 15px;
+
+    @media (max-width: 992px) {
+      width: 300px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+
+    .notification-header {
+      padding: 20px 0;
+      border-bottom: 1px solid #f1f1f1;
+      font-weight: 600;
+      font-size: 18px;
+      color: $color15;
+
+      .close-btn {
+        width: 22px;
+        height: 22px;
+        border: none;
+        background: $color12;
+        color: $color1;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .notification-item {
+      padding: 20px 0;
+      border-bottom: 1px solid #f1f1f1;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .notification-icon {
+        width: 46px;
+        height: 46px;
+        margin-right: 10px;
+      }
+
+      .notification-content {
+        flex-grow: 1;
+
+        h5 {
+          margin: 0;
+          font-weight: 500;
+          font-size: 16px;
+          color: $color15;
+        }
+
+        p {
+          margin: 0;
+          font-weight: 400;
+          font-size: 14px;
+          color: $color6;
+        }
+      }
+
+      .notification-time {
+        font-size: 14px;
+        color: $color6;
+      }
+    }
+  }
+}
+
+.search-table {
+  h4 {
+    font-weight: 700;
+    font-size: 26px;
+    color: $color15;
+  }
+  .table {
+    thead {
+      th {
+        font-weight: 700;
+        font-size: 18px;
+        color: $color15;
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-weight: 600;
+          font-size: 14px;
+          color: $color5;
+        }
+        .appo-time {
+          font-weight: 600;
+          font-size: 14px;
+          color: $color3;
+        }
+        .appo-badge {
+          .badge-primary {
+            width: 82px;
+            height: 28px;
+            background: #5678e91a;
+            font-weight: 600;
+            font-size: 13px;
+            color: $color13;
+            border-radius: 30px;
+            text-align: center;
+          }
+          .badge-warning {
+            width: 82px;
+            height: 28px;
+            background: #ffc3131a;
+            font-weight: 600;
+            font-size: 13px;
+            color: $color14;
+            border-radius: 30px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .profile-header {
+    .breadcrumb {
+      margin-bottom: 10px;
+    }
+  }
+
+  .dashboard-main {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    .mobile-screen {
+      display: none;
+    }
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-container {
+      width: 100% !important;
+      margin-bottom: 0px;
+    }
+
+    .dropdown-toggle {
+      text-align: center;
+      width: 100%;
+    }
+
+    .profile-pic {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

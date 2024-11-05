@@ -1,0 +1,61 @@
+@import "../../../css/variables.scss";
+
+.register-section {
+  .register-card {
+    background: $color1;
+    box-shadow: 0px 0px 15px 0px #0000000a;
+    border: 1px solid $color8;
+    border-radius: 15px;
+    padding: 30px;
+
+    padding-top: 40px !important;
+    width: 85%;
+
+    .register-title {
+      font-weight: 600;
+      font-size: 44px;
+      color: $color15;
+    }
+
+    .form-control,
+    .form-select {
+      height: 50px !important;
+      background: $color1;
+      border-radius: 10px;
+    }
+
+    .register-btn {
+      margin-top: 32px;
+      margin-bottom: 22px;
+      background-color: $color2;
+      color: azure;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .eye-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+    }
+
+    .account-text {
+      font-size: 16px;
+      .main-link {
+        color: $color13;
+      }
+
+      .login-btn {
+        color: $color2;
+      }
+
+      .login-btn:hover {
+        color: $color2;
+      }
+    }
+  }
+}

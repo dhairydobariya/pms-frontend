@@ -1,0 +1,75 @@
+@import "../../../css/variables.scss";
+
+.date-range-modal {
+  .modal-content {
+    border-radius: 10px;
+  }
+
+  .modal-header {
+    padding-bottom: 0;
+
+    .modal-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .btn-close {
+      margin-bottom: 15px;
+      background-color: $color12;
+      border-radius: 50%;
+      --bs-btn-close-opacity: 1;
+    }
+  }
+
+  .modal-body {
+    .form-control {
+      padding: 13px 14px;
+      border-radius: 10px;
+      border: 1px solid $color6;
+    }
+    .form-label {
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        color: $color15 !important;
+    }
+  }
+
+  .modal-footer {
+    border-top: none;
+    padding-top: 0;
+
+    .reset-btn {
+      width: 223px;
+      height: 48px;
+      border: none;
+      background-color: $color12;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-weight: 600;
+      font-size: 18px;
+      color: $color1;
+      transition: all 0.5s;
+    }
+    .apply-btn {
+      width: 223px;
+      height: 48px;
+      background: $color2;
+      border: none;
+      border-radius: 10px;
+      margin-right: 15px;
+      padding: 12px 14px;
+      font-weight: 600;
+      font-size: 18px;
+      color: $color1;
+      transition: all 0.5s;
+    }
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  .react-datepicker__input-container {
+    width: 100%;
+  }
+}

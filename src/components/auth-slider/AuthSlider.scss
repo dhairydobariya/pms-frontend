@@ -1,0 +1,60 @@
+@import "../../css/variables.scss";
+
+.shape_1_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.shape_2_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.shape_3_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.logo_img {
+  padding-top: 114px;
+}
+
+.auth-slider-area {
+  padding-top: 0;
+  padding-bottom: 112px;
+  .swiper-slide {
+    .auth-slider-heading {
+      margin-top: 19px;
+      font-weight: 800;
+      font-size: 44px;
+      color: $color15;
+    }
+    .auth-sub-heading {
+      display: inline-block;
+      width: 336px;
+      margin-top: 15px;
+      font-weight: 700;
+      font-size: 18px;
+      color: $color5;
+      padding-bottom: 40px;
+    }
+  }
+  .swiper-pagination {
+    bottom: 0px !important;
+
+    .swiper-pagination-bullet {
+      width: 35px;
+      height: 10px;
+      background: $linear-gradient-bg;
+      border-radius: 30px;
+      opacity: 1;
+
+      &.swiper-pagination-bullet-active {
+        width: 10px;
+        height: 10px;
+        background: $linear-gradient-bg;
+        border-radius: 30px;
+      }
+    }
+  }
+}

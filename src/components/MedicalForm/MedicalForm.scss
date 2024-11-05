@@ -1,0 +1,83 @@
+@import "../../css/variables.scss";
+
+.medical-form {
+  background-color: $color1;
+  border: 1px solid $color8;
+  border-radius: 10px;
+  max-width: 370px;
+  margin: 20px auto;
+
+  .created-date-section {
+    background: $color9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px;
+    h6 {
+      font-weight: 600;
+      font-size: 18px;
+      color: $color15;
+      margin-bottom: 0;
+    }
+  }
+
+  .medical-innerbox {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid $color8;
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .logo {
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 800;
+        color: $color15;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color15;
+        line-height: 14px;
+      }
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input,
+    textarea {
+      font-size: 14px;
+    }
+
+    .placeholders {
+      font-style: italic;
+      color: #555;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: underline;
+      margin-top: 20px;
+    }
+
+    .document-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: $color15;
+    }
+  }
+}

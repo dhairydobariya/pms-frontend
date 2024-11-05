@@ -1,0 +1,722 @@
+@import "../../../../css/variables.scss";
+
+.profile-header {
+  background-color: $color1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+
+  .breadcrumb {
+    margin-bottom: 0;
+    background: #0eabeb08;
+    border-radius: 30px;
+    padding: 14px 20px;
+    border: 0.3px solid #d9d9d9;
+    display: inline-flex;
+    .breadcrumb-item {
+      font-size: 18px;
+      &.active {
+        color: $color2;
+        font-weight: 400;
+      }
+    }
+
+    .breadcrumb-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, ">");
+  }
+
+  .search-container {
+    position: relative;
+    width: 335px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+    .form-control:focus {
+      background-color: $color9;
+      border-color: transparent;
+      border-radius: 50px;
+      outline: 0;
+      box-shadow: none;
+    }
+
+    input {
+      background-color: $color9;
+      padding: 13px 50px;
+      border-radius: 50px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .dropdown-toggle {
+      &::after {
+        display: inline-block;
+      }
+    }
+
+    .btn-link {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color6;
+      text-decoration: none;
+    }
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .btn-link {
+    text-decoration: none;
+  }
+
+  .user-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color16;
+  }
+
+  .user-role {
+    font-weight: 500;
+    font-size: 12px;
+    color: $color5;
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      background-color: $color1;
+      box-shadow: 0px 0px 40px 0px #00000026;
+      border: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      .dropdown-item {
+        padding: 8px 10px;
+        background-color: $color1;
+        color: $color6;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        &.active,
+        &:active,
+        &:focus {
+          background-color: $color2;
+          color: $color1;
+        }
+
+        &:hover {
+          background-color: $color2;
+          color: $color1;
+        }
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
+
+  .notification-dropdown {
+    .notification-toggle {
+      padding: 0;
+      border: none;
+      background: none;
+
+      .notification-icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .notification-menu {
+      width: 500px;
+      max-height: 500px;
+      overflow-y: auto;
+      padding: 20px;
+      border-radius: 15px;
+
+      @media (max-width: 992px) {
+        width: 300px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+
+      .notification-header {
+        padding: 20px 0;
+        border-bottom: 1px solid #f1f1f1;
+        font-weight: 600;
+        font-size: 18px;
+        color: $color15;
+
+        .close-btn {
+          width: 22px;
+          height: 22px;
+          border: none;
+          background: $color12;
+          color: $color1;
+          border-radius: 50%;
+          font-size: 18px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .notification-item {
+        padding: 20px 0;
+        border-bottom: 1px solid #f1f1f1;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .notification-icon {
+          width: 46px;
+          height: 46px;
+          margin-right: 10px;
+        }
+
+        .notification-content {
+          flex-grow: 1;
+
+          h5 {
+            margin: 0;
+            font-weight: 500;
+            font-size: 16px;
+            color: $color15;
+          }
+
+          p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 14px;
+            color: $color6;
+          }
+        }
+
+        .notification-time {
+          font-size: 14px;
+          color: $color6;
+        }
+      }
+    }
+  }
+
+  .breadcrumb-container {
+    .btn {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $color10;
+      padding: 10px;
+      &:first-child {
+        &:active {
+          background-color: transparent;
+          border-color: transparent;
+          color: $color10;
+        }
+      }
+    }
+
+    i.bi-text-left {
+      font-size: 30px;
+    }
+  }
+}
+
+.select-invoice-page {
+  background-color: $color1;
+  border-radius: 15px;
+  margin-top: 30px;
+  padding: 40px;
+
+  .select-invoice-title {
+    font-weight: 700;
+    font-size: 26px;
+    color: $color15;
+  }
+
+  .select-btn {
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: $color2;
+    font-weight: 600;
+    font-size: 18px;
+    color: $color1;
+    margin-top: 20px;
+  }
+}
+
+.template-option {
+  position: relative;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid $color8;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.image-theme {
+  .templete-header {
+    background-image: url("/assets/images/templete-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    .templet-spacing {
+      padding: 20px;
+      h2 {
+        color: $color1;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      h1 {
+        color: $color1;
+        font-weight: 600;
+        font-size: 34px;
+      }
+    }
+  }
+  .sub-header {
+    background-color: $color2;
+    color: $color1;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .templete-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    th {
+      color: $color2;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    td {
+      color: $color5;
+      font-weight: 400;
+      font-size: 13px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+  .totals {
+    margin-top: 20px;
+    text-align: right;
+    span {
+      color: $color5;
+      font-weight: 400;
+      font-size: 13px;
+    }
+    strong {
+      color: $color5;
+      font-weight: 800;
+      font-size: 15px;
+    }
+  }
+  .notes {
+    margin-top: 20px;
+    h3 {
+      color: $color6;
+      font-weight: 400;
+      font-size: 13px;
+    }
+    p {
+      color: $color5;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    h3 {
+      color: $color2;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    p {
+      color: $color5;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+  .footer-bottom {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: $color2;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    p {
+      color: $color1;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
+
+.blue-theme {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: $color2;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    padding: 20px;
+    .title {
+      h4 {
+        font-weight: 700;
+        font-size: 34px;
+        color: $color1;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: $color1;
+      }
+    }
+  }
+  .content {
+    .billed-to {
+      h6 {
+        font-weight: 600;
+        font-size: 13px;
+        color: $color6;
+      }
+      h3 {
+        font-weight: 600;
+        font-size: 16px;
+        color: $color15;
+      }
+      h5 {
+        font-weight: 400;
+        font-size: 12px;
+        color: $color5;
+      }
+      .invoice-date {
+        font-weight: 600;
+        font-size: 12px;
+        color: $color5;
+      }
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        color: $color5;
+      }
+      .total-count {
+        color: $color2;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+    .blue_theme-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      th {
+        border-radius: 5px;
+        background-color: $color2;
+        padding: 15px;
+        font-weight: 500;
+        font-size: 13px;
+        color: $color1;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+      td {
+        font-weight: 500;
+        font-size: 12px;
+        color: $color5;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+    .total {
+      p {
+        font-weight: 600;
+        font-size: 15px;
+        color: $color4;
+        strong {
+          font-weight: 600;
+          font-size: 15px;
+          color: $color15;
+          margin-right: 20px;
+        }
+      }
+      .final-total-count {
+        font-weight: 700;
+        font-size: 15px;
+        color: $color2;
+        strong {
+          font-weight: 700;
+          font-size: 15px;
+          color: $color2;
+          margin-right: 20px;
+        }
+      }
+    }
+    .term_condition {
+      h4 {
+        font-weight: 600;
+        font-size: 14px;
+        color: $color15;
+      }
+      p {
+        width: 240px;
+        font-weight: 400;
+        font-size: 13px;
+        color: $color6;
+      }
+      .sign {
+        padding: 10px 20px;
+        font-weight: 600;
+        font-size: 14px;
+        color: $color15;
+        border-bottom: 1px solid $color15;
+      }
+    }
+  }
+}
+
+.white-theme {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url("/assets/images/invoice-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    .logo {
+      img {
+        width: 180px;
+      }
+    }
+    .title {
+      font-size: 44px;
+      font-weight: 700;
+      color: $color2;
+    }
+  }
+  .content {
+    .billed-to {
+      h4 {
+        font-weight: 700;
+        font-size: 14px;
+        color: $color10;
+      }
+      .invoice-date {
+        font-weight: 600;
+        font-size: 13px;
+        color: $color4;
+        span {
+          font-weight: 600;
+          font-size: 13px;
+          color: $color10;
+        }
+      }
+      .address-text {
+        font-weight: 400;
+        font-size: 11px;
+        color: $color4;
+      }
+    }
+    .white_theme-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      th {
+        border-radius: 5px;
+        background-color: $color2;
+        padding: 15px;
+        font-weight: 500;
+        font-size: 13px;
+        color: $color1;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+      td {
+        font-weight: 500;
+        font-size: 12px;
+        color: $color5;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+    .payment-method {
+      h4 {
+        font-weight: 600;
+        font-size: 13px;
+        color: $color10;
+      }
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        color: $color4;
+      }
+    }
+    .total {
+      p {
+        font-weight: 600;
+        font-size: 15px;
+        color: $color4;
+        strong {
+          font-weight: 600;
+          font-size: 15px;
+          color: $color15;
+          margin-right: 20px;
+        }
+      }
+      .final-total-count {
+        font-weight: 700;
+        font-size: 15px;
+        color: $color2;
+        strong {
+          font-weight: 700;
+          font-size: 15px;
+          color: $color2;
+          margin-right: 20px;
+        }
+      }
+    }
+    .pay-spacing {
+      padding-bottom: 10px;
+    }
+    .term_condition {
+      border-top: 1px solid $color9;
+      padding-top: 10px;
+      h4 {
+        font-weight: 600;
+        font-size: 14px;
+        color: $color15;
+      }
+      p {
+        font-weight: 400;
+        font-size: 13px;
+        color: $color6;
+      }
+    }
+  }
+  .footer-bottom {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: $color2;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    p {
+      color: $color1;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
+
+.template-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(18.299999237060547px);
+  background: rgba(20, 20, 20, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.btn-choose-template {
+  background-color: $color2;
+  color: $color1;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+@media (max-width: 992px) {
+  .select-invoice-page {
+    padding: 20px;
+    .select-invoice-title {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    .search-container {
+      width: 100% !important;
+      margin-bottom: 0px;
+    }
+    .mobile-screen {
+      display: none;
+    }
+  }
+  .white-theme {
+    .header {
+      .title {
+        display: none;
+      }
+    }
+  }
+  .blue-theme {
+    .header {
+      .title {
+        display: none;
+      }
+    }
+  }
+}
