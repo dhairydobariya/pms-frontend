@@ -32,7 +32,7 @@ const DoctorResetPassword = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:9500/v1/doctor/reset-password",
+        `${import.meta.env.VITE_API_BASE_URL}/v1/doctor/reset-password`,
         {
           method: "PUT",
           headers: {

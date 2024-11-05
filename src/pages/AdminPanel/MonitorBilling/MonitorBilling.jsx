@@ -169,7 +169,7 @@ const MonitorBilling = () => {
 
   const fetchBillingData = async () => {
     try {
-        const response = await axios.get('http://localhost:9500/v1/bill/list-bill');
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/v1/bill/list-bill`);
         console.log(response.data, "response");
 
         // Check if the response was successful and contains billing data

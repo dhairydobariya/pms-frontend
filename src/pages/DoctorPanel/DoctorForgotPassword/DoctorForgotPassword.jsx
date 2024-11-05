@@ -17,7 +17,7 @@ const DoctorForgotPassword = () => {
       localStorage.removeItem("adminId");
       // Make the API request
       const response = await axios.post(
-        "http://localhost:9500/v1/doctor/forgot-pass",
+        `${import.meta.env.VITE_API_BASE_URL}/v1/doctor/forgot-pass`,
         {
           email: values.email,
         }

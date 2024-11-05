@@ -152,7 +152,7 @@ const AddDoctorForm = () => {
         formData.append("signature", signature);
       }
 
-      const response = await axios.post("http://localhost:9500/v1/admin/add-doctor-by-admin", formData, {
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/v1/admin/add-doctor-by-admin`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

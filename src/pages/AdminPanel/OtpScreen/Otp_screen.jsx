@@ -33,7 +33,7 @@ const Otp_screen = () => {
     try {
       // Make the API request with the email and OTP
       const response = await axios.post(
-        "http://localhost:9500/v1/admin/verify-otp",
+        `${import.meta.env.VITE_API_BASE_URL}/v1/admin/verify-otp`,
         {
           email, // Pass the stored email
           otp: values.otp.join(""), // Concatenate the OTP array to a string

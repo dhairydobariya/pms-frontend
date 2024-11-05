@@ -40,7 +40,7 @@ const Register = () => {
       console.log("Form values:", values);
 
       const response = await axios.post(
-        "http://localhost:9500/v1/admin/create-admin",
+        `${import.meta.env.VITE_API_BASE_URL}/v1/admin/create-admin`,
         {
           first_name: values.first_name,
           last_name: values.last_name,
@@ -113,7 +113,7 @@ const Register = () => {
   const fetchHospitals = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:9500/v1/hospital/get-hospitals"
+        `${import.meta.env.VITE_API_BASE_URL}/v1/hospital/get-hospitals`
       );
       setHospitals(response.data.data);
     } catch (error) {

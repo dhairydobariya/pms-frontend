@@ -159,7 +159,7 @@ const AdminProfile = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:9500/v1/admin/change-password",
+        `${import.meta.env.VITE_API_BASE_URL}/v1/admin/change-password`,
         {
           oldpass: oldPass,
           newpass: newPass,
@@ -188,7 +188,7 @@ const AdminProfile = () => {
   const fetchHospitalData = async (hospitalId) => {
     try {
       const response = await axios.post(
-        "http://localhost:9500/v1/hospital/get-hospital-by-id",
+        `${import.meta.env.VITE_API_BASE_URL}/v1/hospital/get-hospital-by-id`,
         { id: hospitalId },
         {
           headers: {
