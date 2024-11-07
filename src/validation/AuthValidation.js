@@ -22,7 +22,7 @@ export const loginValidationSchema = Yup.object({
     .required("Email or phone number is required"),
   
   password: Yup.string()
-    .min(8, "Password must be at least 8 characters")
+    .min(6, "Password must be at least 6 characters")
     .required("Password is required"),
 });
 
@@ -67,7 +67,7 @@ export const registerValidationSchema = Yup.object().shape({
     .required('Please select a hospital'),
 
   password: Yup.string()
-    .min(6, 'Password must be at least 8 characters')
+    .min(6, 'Password must be at least 6 characters')
     .required('Password is required'),
 
   confirmPassword: Yup.string()
@@ -135,7 +135,7 @@ export const pregisterValidationSchema = Yup.object().shape({
 export const resetPasswordValidationSchema = Yup.object().shape({
   newPassword: Yup.string()
     .required("New Password is required")
-    .min(8, "Password must be at least 8 characters"),
+    .min(6, "Password must be at least 6 characters"),
   confirmPassword: Yup.string()
     .required("Please confirm your password")
     .oneOf([Yup.ref("newPassword"), null], "Passwords must match"),
