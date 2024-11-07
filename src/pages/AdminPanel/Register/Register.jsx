@@ -40,7 +40,7 @@ const Register = () => {
       console.log("Form values:", values);
 
       const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/v1/admin/create-admin`,
+        `${import.meta.env.VITE_API_BASE_URL}/admin/register`,
         {
           first_name: values.first_name,
           last_name: values.last_name,
@@ -113,9 +113,11 @@ const Register = () => {
   const fetchHospitals = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URL}/v1/hospital/get-hospitals`
+        `${import.meta.env.VITE_API_BASE_URL}/admin/hospitals`
       );
-      setHospitals(response.data.data);
+      console.log(response,"---------------------------------------------------------------------");
+      
+      setHospitals(response.data.data); // Adjust this line if the data structure is different
     } catch (error) {
       console.error("Error fetching hospitals:", error);
     }
@@ -314,26 +316,24 @@ const Register = () => {
                       </div>
                     </div>
 
-                    {/* Hospital Field */}
+                     {/* Hospital Field */}
                     <div className="form-floating mb-3">
                       <Field
                         as="select"
-                        name="hospitalId" // Updated to hospitalId
+                        name="hospitalId"
                         className={`form-select ${
-                          errors.hospitalId && touched.hospitalId
-                            ? "is-invalid"
-                            : ""
+                          errors.hospitalId && touched.hospitalId ? "is-invalid" : ""
                         }`}
                       >
                         <option value="">Select Hospital</option>
                         {hospitals.map((hospital) => (
                           <option key={hospital._id} value={hospital._id}>
-                            {hospital.hospital_name}
+                            {hospital.name}
                           </option>
                         ))}
                       </Field>
                       <ErrorMessage
-                        name="hospitalId" // Updated to hospitalId
+                        name="hospitalId"
                         component="div"
                         className="invalid-feedback"
                       />
