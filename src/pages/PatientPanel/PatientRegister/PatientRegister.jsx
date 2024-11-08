@@ -40,32 +40,35 @@ const PatientRegister = () => {
 
   const handleSubmit = async (values) => {
     const payload = {
-      first_name: values.firstName,
-      last_name: values.lastName,
+      firstName: values.firstName,
+      lastName: values.lastName,
       password: values.password,
       confirmPassword: values.confirmPassword,
       email: values.email,
-      phone_number: values.phoneNumber,
-      country: values.country,
-      state: values.state,
-      city: values.city,
+      phoneNumber: values.phoneNumber,
       age: values.age,
-      patient_address: values.patientAddress,
       gender: values.gender, // Ensure this is the correct format
-      dob: values.birthdate,
-      blood_group: values.bloodgroup,
+      dateOfBirth: values.birthdate,
+      bloodGroup: values.bloodgroup,
       weight: values.weight,
       height: values.height,
+      address: {
+        country: values.country,
+        state: values.state,
+        city: values.city,
+        street: values.patientAddress, // Using the provided street field
+      },
     };
     console.log(payload);
     dob: new Date(values.birthdate).toISOString().split("T")[0],
       console.log("Form values:", values);
     try {
       const response = await axios.post(
-       `${import.meta.env.VITE_API_BASE_URL}/v1/patient/create-patient`,
+       `${import.meta.env.VITE_API_BASE_URL}/patient/register`,
         payload
       );
       // Optionally, you can redirect or show a success message
+      navigate("/login");
     } catch (error) {
       console.error(
         "Registration error:",
@@ -114,9 +117,10 @@ const PatientRegister = () => {
   const fetchHospitals = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URL}/v1/hospital/get-hospitals`
+        `${import.meta.env.VITE_API_BASE_URL}/admin/hospitals`
       );
-      setHospitals(response.data.data);
+      console.log(response.data , "------------------------------>")
+      setHospitals(response.data);
     } catch (error) {
       console.error("Error fetching hospitals:", error);
     }
@@ -292,8 +296,9 @@ const PatientRegister = () => {
                             className="form-select"
                           >
                             <option value="select">Select Gender</option>
-                            <option value={"male"}>Male</option>
-                            <option value={"female"}>FeMale</option>
+                            <option value={"Male"}>Male</option>
+                            <option value={"Female"}>FeMale</option>
+                            <option value={"Other"}>Other</option>
                           </Field>
                           <label htmlFor="gender">Gender</label>
                           <ErrorMessage
@@ -311,11 +316,14 @@ const PatientRegister = () => {
                             className="form-select"
                           >
                             <option value="">Select Group</option>
-                            <option value={"male"}>A+</option>
-                            <option value={"female"}>B+</option>
-                            <option value={"female"}>B-</option>
-                            <option value={"female"}>AB-</option>
-                            <option value={"female"}>AB+</option>
+                            <option value={"A+"}>A+</option>
+                            <option value={"A-"}>A-</option>
+                            <option value={"B+"}>B+</option>
+                            <option value={"B-"}>B-</option>
+                            <option value={"AB-"}>AB-</option>
+                            <option value={"AB+"}>AB+</option>
+                            <option value={"O+"}>O+</option>
+                            <option value={"O-"}>O-</option>
                           </Field>
                           <label htmlFor="bloodgroup">Blood Group</label>
                           <ErrorMessage
@@ -445,7 +453,7 @@ const PatientRegister = () => {
                         <option value="">Select Hospital</option>
                         {hospitals.map((hospital) => (
                           <option key={hospital._id} value={hospital._id}>
-                            {hospital.hospital_name}
+                            {hospital.name}
                           </option>
                         ))}
                       </Field>
