@@ -115,9 +115,9 @@ const Register = () => {
       const response = await axios.get(
         `${import.meta.env.VITE_API_BASE_URL}/admin/hospitals`
       );
-      console.log(response,"---------------------------------------------------------------------");
+      console.log(response.data,"---------------------------------------------------------------------");
       
-      setHospitals(response.data.data); // Adjust this line if the data structure is different
+      setHospitals(response.data); // Adjust this line if the data structure is different
     } catch (error) {
       console.error("Error fetching hospitals:", error);
     }
@@ -326,7 +326,7 @@ const Register = () => {
                         }`}
                       >
                         <option value="">Select Hospital</option>
-                        {hospitals.map((hospital) => (
+                        {hospitals?.map((hospital) => (
                           <option key={hospital._id} value={hospital._id}>
                             {hospital.name}
                           </option>
