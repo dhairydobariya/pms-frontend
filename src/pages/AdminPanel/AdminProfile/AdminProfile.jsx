@@ -159,7 +159,7 @@ const AdminProfile = () => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/v1/admin/change-password`,
+        `${import.meta.env.VITE_API_BASE_URL}/admin/change-password`,
         {
           oldpass: oldPass,
           newpass: newPass,

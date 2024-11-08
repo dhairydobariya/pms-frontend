@@ -174,7 +174,7 @@ const EditDoctor = () => {
         formData.append("signatureImage", signatureFile);
       }
       const response = await axios.put(
-        `${import.meta.env.VITE_API_BASE_URL}/v1/admin/update-doctor-by-admin`,
+        `${import.meta.env.VITE_API_BASE_URL}/doctor/profile`,
         formData,
         {
           headers: {
