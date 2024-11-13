@@ -64,7 +64,7 @@ const PatientRegister = () => {
       console.log("Form values:", values);
     try {
       const response = await axios.post(
-       `${import.meta.env.VITE_API_BASE_URL}/patient/register`,
+       `${import.meta.env.VITE_API_BASE_URLs}/patient/register`,
         payload
       );
       // Optionally, you can redirect or show a success message
@@ -117,7 +117,7 @@ const PatientRegister = () => {
   const fetchHospitals = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URL}/admin/hospitals`
+        `${import.meta.env.VITE_API_BASE_URLs}/admin/hospitals`
       );
       console.log(response.data , "------------------------------>")
       setHospitals(response.data);

@@ -118,7 +118,7 @@ const EditDoctor = () => {
       const adminId = localStorage.getItem("adminId");
       try {
         const response = await axios.post(
-          `${import.meta.env.VITE_API_BASE_URL}/v1/dashboard-adminFlow/doctor-list-id`,
+          `${import.meta.env.VITE_API_BASE_URLs}/v1/dashboard-adminFlow/doctor-list-id`,
           {
             adminId: adminId,
             doctorId: doctorId,
@@ -174,7 +174,7 @@ const EditDoctor = () => {
         formData.append("signatureImage", signatureFile);
       }
       const response = await axios.put(
-        `${import.meta.env.VITE_API_BASE_URL}/doctor/profile`,
+        `${import.meta.env.VITE_API_BASE_URLs}/doctor/profile`,
         formData,
         {
           headers: {

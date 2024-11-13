@@ -33,7 +33,7 @@ const DoctorOtpScreen = () => {
     try {
       // Make the API request with the email and OTP
       const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/v1/doctor/verify-otp`,
+        `${import.meta.env.VITE_API_BASE_URLs}/v1/doctor/verify-otp`,
         {
           email, // Pass the stored email
           otp: values.otp.join(""), // Concatenate the OTP array to a string
