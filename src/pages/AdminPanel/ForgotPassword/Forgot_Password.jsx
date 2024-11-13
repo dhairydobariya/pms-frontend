@@ -23,11 +23,11 @@ const Forgot_Password = () => {
       localStorage.removeItem("adminId");
       // Make the API request
       const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/v1/admin/forgot-pass`,
+        `${import.meta.env.VITE_API_BASE_URL}/password/forgot-password`,
         {
-          email: values.email,
+          identifier: values.email,
         }
-      );
+      ); 
 
       // Store email and adminId in localStorage
       const { adminId } = response.data; // Assuming adminId comes from the API response
@@ -45,6 +45,7 @@ const Forgot_Password = () => {
     } finally {
       setSubmitting(false);
     }
+
   };
 
   return (
@@ -82,6 +83,8 @@ const Forgot_Password = () => {
                         className="invalid-feedback"
                       />
                     </div>
+
+
 
                     <button
                       type="submit"
