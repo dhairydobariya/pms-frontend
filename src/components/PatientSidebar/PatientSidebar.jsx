@@ -108,7 +108,7 @@ const PatientSidebar = ({ isOpen, sidebarRef, activeLink }) => {
           </button>
         </div>
         <div className="logout-section">
-          <a href="#logout" className="nav-link nav-links-6">
+          <a href="/" className="nav-link nav-links-6">
             Logout
           </a>
         </div>

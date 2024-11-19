@@ -45,18 +45,32 @@ const PersonalHealthRecord = () => {
 
 
   const fetchHospitals = async () => {
+    const jwt = localStorage.getItem("token"); // Retrieve JWT from localStorage
+    if (!jwt) {
+      console.error("No JWT token found in localStorage");
+      return;
+    }
+  
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URL}/profile`
+        `${import.meta.env.VITE_API_BASE_URLs}/patient/profile`,
+        {
+          headers: {
+            Authorization: `Bearer ${jwt}`, // Add the JWT as a Bearer token
+          },
+        }
       );
-      console.log(response.data,"---------------------------------------------------------------------");
       
-      setHospitals(response.data); // Adjust this line if the data structure is different
+      console.log("Hospital data:", response.data); // Log the response data
+      setHospitals(response.data); // Adjust if data structure differs
     } catch (error) {
       console.error("Error fetching hospitals:", error);
     }
   };
+  
   fetchHospitals();
+
+
   const [notifications, setNotifications] = useState([
     {
       id: 1,
