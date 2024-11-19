@@ -7,8 +7,10 @@ import * as Yup from "yup"; // Ensure you import Yup for validation
 import "./PatientLogin.scss";
 import { loginValidationSchema } from "../../../validation/AuthValidation";
 
+
 const PatientLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const  navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -29,12 +31,12 @@ const PatientLogin = () => {
           password: values.password,
         }
       );
-      navigate("/personalHealthRecord");
+      
       localStorage.setItem("patientId", response.data.patientId);
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("patient", JSON.stringify(response.data));
       // Handle successful login (e.g., save token, redirect)
-      
+      navigate("/personalHealthRecord");
     } catch (error) {
       console.error("Login failed:", error.response?.data || error.message);
       // Handle login error (e.g., show error message)

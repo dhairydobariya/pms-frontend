@@ -118,7 +118,7 @@ const PatientRegister = () => {
       console.error("Error fetching cities:", error);
     }
   };
-
+  
   const fetchHospitals = async () => {
     try {
       const response = await axios.get(
@@ -130,6 +130,7 @@ const PatientRegister = () => {
       console.error("Error fetching hospitals:", error);
     }
   };
+      
   return (
     <section className="register-section">
       <div className="container-fluid vh-100 d-flex">

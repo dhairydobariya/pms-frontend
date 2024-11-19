@@ -3,11 +3,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import PatientSidebar from "../../../components/PatientSidebar/PatientSidebar";
 import "./PersonalHealthRecord.scss";
+import axios from "axios";
 
 const PersonalHealthRecord = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchVisible, setIsSearchVisible] = useState(false);
-
+  const [hospitals, setHospitals] = useState([]);
   const sidebarRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
@@ -42,6 +43,20 @@ const PersonalHealthRecord = () => {
     };
   }, [isSidebarOpen]);
 
+
+  const fetchHospitals = async () => {
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_BASE_URL}/profile`
+      );
+      console.log(response.data,"---------------------------------------------------------------------");
+      
+      setHospitals(response.data); // Adjust this line if the data structure is different
+    } catch (error) {
+      console.error("Error fetching hospitals:", error);
+    }
+  };
+  fetchHospitals();
   const [notifications, setNotifications] = useState([
     {
       id: 1,

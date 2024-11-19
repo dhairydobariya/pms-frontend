@@ -354,6 +354,7 @@ function App() {
           path="/personalHealthRecord"
           element={<PersonalHealthRecord />}
         />
+        {/* personalHealthRecord */}
         <Route path="/patientDetailsEdit" element={<PatientDetailsEdit />} />
         <Route
           path="/personalHealthRecordPrescription"
