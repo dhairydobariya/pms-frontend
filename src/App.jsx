@@ -120,7 +120,7 @@ function App() {
           }
         />
         <Route
-          path="/"
+          path="/dashboard"
           element={
             <PrivateRoute>
               <Dashboard />
@@ -328,9 +328,16 @@ function App() {
           element={<DoctorTeleconsultation />}
         />
         <Route path="/doctor-chat" element={<DoctorChat />} />
+
+
         {/* Patient */}
+
+
+
         <Route path="/patient-register" element={<PatientRegister />} />
-        <Route path="/patient-login" element={<PatientLogin />} />
+        {/* /patient-register */}
+        <Route path="/" element={<PatientLogin />} />
+        {/* patient-login */}
         <Route
           path="/patient-forgot-password"
           element={<PatientForgotPassword />}

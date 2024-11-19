@@ -18,7 +18,7 @@ const DoctorManagement = () => {
   const [doctors, setDoctors] = useState([]);
   const [notifications, setNotifications] = useState([
     {
-      id: 1,
+      id: 1, 
       title: "Change Invoice Theme",
       description: "Lincoln Philips changed the Invoice Theme.",
       time: "5 min ago",
@@ -111,7 +111,7 @@ const DoctorManagement = () => {
             headers: {
               Authorization: `Bearer ${token}`, // Include the token in the headers
             },
-            data: { doctorId: selectedDoctor._id, adminid: adminId },
+            data: { doctorId: selectedDoctor._id, adminid: adminId }, 
           }
         );
         setDoctors(
@@ -130,9 +130,10 @@ const DoctorManagement = () => {
   const fetchDoctors = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URLs}/v1/doctor/getAlldoctors`
+        `${import.meta.env.VITE_API_BASE_URLs}/admin/doctor-manegment`
       );
-      setDoctors(response.data.data);
+      console.log(response.data);
+      setDoctors(response.data);
       setFilteredDoctors(response.data.searchResults);
     } catch (error) {
       console.error("Error fetching doctors:", error);

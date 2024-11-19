@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AuthSlider from "../../../components/auth-slider/AuthSlider";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./PatientRegister.scss";
 
@@ -13,6 +13,7 @@ const PatientRegister = () => {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   const [hospitals, setHospitals] = useState([]);
+  const  navigate = useNavigate();
 
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
   const toggleConfirmPasswordVisibility = () =>
@@ -68,7 +69,7 @@ const PatientRegister = () => {
         payload
       );
       // Optionally, you can redirect or show a success message
-      navigate("/login");
+      navigate("/patient-login");
     } catch (error) {
       console.error(
         "Registration error:",
@@ -98,6 +99,10 @@ const PatientRegister = () => {
       console.error("Error fetching countries and states:", error);
     }
   };
+
+
+
+
 
   const fetchCities = async (countryName, stateName) => {
     try {
@@ -565,9 +570,12 @@ const PatientRegister = () => {
 
                     <div className="text-center account-text mt-3">
                       Already have an account?{" "}
-                      <Link to={"/patient-login"} className="main-link ms-1">
+                      <Link to={"/"} className="main-link ms-1">
                         Login
                       </Link>
+                      {/* <Link to={"/patient-login"} className="main-link ms-1">
+                        Login
+                      </Link> */}
                     </div>
                   </Form>
                 )}
