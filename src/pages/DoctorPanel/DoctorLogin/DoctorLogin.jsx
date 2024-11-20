@@ -4,6 +4,7 @@ import AuthSlider from "../../../components/auth-slider/AuthSlider";
 import { Link, useNavigate } from "react-router-dom";
 import { loginValidationSchema } from "../../../validation/AuthValidation";
 import "./DoctorLogin.scss";
+import axios from "axios";
 
 const DoctorLogin = () => {
   const [showPassword, setShowPassword] = useState(false);

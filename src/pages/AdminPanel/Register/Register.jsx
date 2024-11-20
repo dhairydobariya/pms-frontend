@@ -42,16 +42,16 @@ const Register = () => {
       const response = await axios.post(
         `${import.meta.env.VITE_API_BASE_URLs}/admin/register`,
         {
-          first_name: values.first_name,
-          last_name: values.last_name,
-          phone_number: values.phone_number,
+          firstName: values.first_name,
+          lastName: values.last_name,
+          phoneNumber: values.phone_number,
           email: values.email,
           password: values.password,
           confirmPassword: values.confirmPassword,
           country: values.country,
           state: values.state,
           city: values.city,
-          hospitalId: values.hospitalId,
+          hospital: values.hospitalId,
           agree: values.agree,
         },
         {
