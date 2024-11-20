@@ -3,10 +3,27 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import PatientSidebar from "../../../components/PatientSidebar/PatientSidebar";
 import "./PatientDetailsEdit.scss";
+import axios from "axios";
 
 const PatientDetailsEdit = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
+    gender: "",
+    dob: "",
+    age: "",
+    bloodGroup: "",
+    height: "",
+    weight: "",
+    country: "",
+    state: "",
+    city: "",
+    address: "",
+  });
 
   const sidebarRef = useRef(null);
   const location = useLocation();
@@ -42,6 +59,58 @@ const PatientDetailsEdit = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isSidebarOpen]);
+
+  const fetchpatient = async () => {
+    const jwt = localStorage.getItem("token"); // Retrieve JWT from localStorage
+    if (!jwt) {
+      console.error("No JWT token found in localStorage");
+      return;
+    }
+
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_BASE_URLs}/patient/profile`,
+        {
+          headers: {
+            Authorization: `Bearer ${jwt}`, // Add the JWT as a Bearer token
+          },
+        }
+      );
+
+      const patientData = response.data;
+      setFormData({
+        firstName: patientData.firstName || "",
+        lastName: patientData.lastName || "",
+        phoneNumber: patientData.phoneNumber || "",
+        email: patientData.email || "",
+        gender: patientData.gender || "",
+        dob: patientData.dob || "",
+        age: patientData.age || "",
+        bloodGroup: patientData.bloodGroup || "",
+        height: patientData.height || "",
+        weight: patientData.weight || "",
+        country: patientData.country || "",
+        state: patientData.state || "",
+        city: patientData.city || "",
+        address: patientData.address || "",
+      });
+    } catch (error) {
+      console.error("Error fetching patient:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchpatient();
+  }, []);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
 
   const [notifications, setNotifications] = useState([
     {

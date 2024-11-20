@@ -69,7 +69,7 @@ const PatientRegister = () => {
         payload
       );
       // Optionally, you can redirect or show a success message
-      navigate("/patient-login");
+      navigate("/");
     } catch (error) {
       console.error(
         "Registration error:",
