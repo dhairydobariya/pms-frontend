@@ -23,7 +23,7 @@ const DoctorLogin = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URLs}/v1/doctor/doctor-login`,
+        `${import.meta.env.VITE_API_BASE_URLs}/login`,
         {
           identifier: values.email,
           password: values.password,
