@@ -37,7 +37,7 @@ const PersonalHealthRecord = () => {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-
+    fetchHospitals();
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -45,6 +45,7 @@ const PersonalHealthRecord = () => {
 
 
   const fetchHospitals = async () => {
+    
     const jwt = localStorage.getItem("token"); // Retrieve JWT from localStorage
     if (!jwt) {
       console.error("No JWT token found in localStorage");
@@ -68,7 +69,7 @@ const PersonalHealthRecord = () => {
     }
   };
   
-  fetchHospitals();
+  
 
 
   const [notifications, setNotifications] = useState([
@@ -362,62 +363,62 @@ const PersonalHealthRecord = () => {
                       <div className="row patient-details-box">
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Name</strong> Marcus Philips
+                            <strong>Name</strong>  {hospitals.firstName + " " + hospitals.lastName}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Number</strong> 99130 44537
+                            <strong>Number</strong> {hospitals.phoneNumber}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Email</strong> john@gmail.com
+                            <strong>Email</strong> {hospitals.email}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Gender</strong> Male
+                            <strong>Gender</strong> {hospitals.gender}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>DOB</strong> 2 Jan, 2022
+                            <strong>DOB</strong>{hospitals.dateOfBirth}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Age</strong> 20 Years
+                            <strong>Age</strong> {hospitals.age}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Blood Group</strong> B+
+                            <strong>Blood Group</strong> {hospitals.bloodGroup}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Height (cm)</strong> 160
+                            <strong>Height (cm)</strong> {hospitals.height}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Weight (kg)</strong> 50
+                            <strong>Weight (kg)</strong> { hospitals.weight}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Country</strong> India
+                            <strong>Country</strong> {hospitals.address.country}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>State</strong> Gujarat
+                            <strong>State</strong> {hospitals.address.state}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>City</strong> Ahmedabad
+                            <strong>City</strong> {hospitals.address.city}
                           </p>
                         </div>
                       </div>
