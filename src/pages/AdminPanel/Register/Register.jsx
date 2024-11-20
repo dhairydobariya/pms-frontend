@@ -40,7 +40,7 @@ const Register = () => {
       console.log("Form values:", values);
 
       const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/admin/register`,
+        `${import.meta.env.VITE_API_BASE_URLs}/admin/register`,
         {
           first_name: values.first_name,
           last_name: values.last_name,
@@ -113,7 +113,7 @@ const Register = () => {
   const fetchHospitals = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_BASE_URL}/admin/hospitals`
+        `${import.meta.env.VITE_API_BASE_URLs}/admin/hospitals`
       );
       console.log(response.data,"---------------------------------------------------------------------");
       
@@ -445,6 +445,9 @@ const Register = () => {
 
               <div className="text-center mt-3">
                 Already have an account? <Link to="/login">Login</Link>
+              </div>
+              <div className="text-center mt-3">
+                Already have an account? <Link to="/patient-register">patient-register-page</Link>
               </div>
             </div>
           </div>

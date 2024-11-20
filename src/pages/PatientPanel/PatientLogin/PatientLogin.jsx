@@ -49,7 +49,7 @@ const PatientLogin = () => {
         <div className="row w-100 align-items-center">
           <div className="col-md-6 d-flex justify-content-center">
             <div className="login-card p-4">
-              <h2 className="mb-4 login-title">Login</h2>
+              <h2 className="mb-4 login-title">Patient-Login</h2>
               <Formik
                 initialValues={initialValues}
                 validationSchema={loginValidationSchema}
@@ -145,6 +145,21 @@ const PatientLogin = () => {
                       Don't have an account?{" "}
                       <Link to={"patient-register"} className="main-link ms-1">
                         Registration
+                      </Link>
+                    </div>
+                    <div className="text-center account-text mt-3">
+                      <Link to="/login" className="main-link ms-1">
+                        Admin-login
+                      </Link>
+                    </div>
+                    <div className="text-center account-text mt-3">
+                      <Link to={"/doctor-login"} className="main-link ms-1">
+                        Doctor-login
+                      </Link>
+                    </div>
+                    <div className="text-center account-text mt-3">
+                      <Link to={"/login"} className="main-link ms-1">
+                        Admin-login
                       </Link>
                     </div>
                   </Form>

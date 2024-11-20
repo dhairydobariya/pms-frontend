@@ -23,7 +23,7 @@ const Forgot_Password = () => {
       localStorage.removeItem("adminId");
       // Make the API request
       const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/password/forgot-password`,
+        `${import.meta.env.VITE_API_BASE_URLs}/password/forgot-password`,
         {
           identifier: values.email,
         }

@@ -574,9 +574,13 @@ const PatientRegister = () => {
                       <Link to={"/"} className="main-link ms-1">
                         Login
                       </Link>
+
                       {/* <Link to={"/patient-login"} className="main-link ms-1">
                         Login
                       </Link> */}
+                    </div>
+                    <div className="text-center mt-3">
+                    Already have an account? <Link to="/register">Admin-register-page</Link>
                     </div>
                   </Form>
                 )}
