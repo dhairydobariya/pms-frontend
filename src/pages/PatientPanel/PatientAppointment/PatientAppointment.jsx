@@ -274,7 +274,7 @@ const PatientAppointment = () => {
                         />
                         <div className="d-none text-start">
                           <h3 className="user-name mb-0">Lincoln Philips</h3>
-                          <span className="user-role">Admin</span>
+                          <span className="user-role">Patient</span>
                         </div>
                       </div>
                     </Dropdown.Toggle>
@@ -345,7 +345,7 @@ const PatientAppointment = () => {
                         />
                         <div className="d-block text-start">
                           <h3 className="user-name mb-0">Lincoln Philips</h3>
-                          <span className="user-role">Admin</span>
+                          <span className="user-role">Patient</span>
                         </div>
                       </div>
                     </Dropdown.Toggle>

@@ -132,7 +132,7 @@ const PatientLogin = () => {
                         </label>
                       </div>
                       <div className="mb-3 d-flex justify-content-between">
-                        <Link to={"/forgot-password"} className="main-link">
+                        <Link to={"/patient-forgot-password"} className="main-link">
                           Forgot password?
                         </Link>
                       </div>

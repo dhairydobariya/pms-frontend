@@ -56,8 +56,11 @@
   }
 
   .nav-link.active {
-    background: $linear-gradient-bg-3;
-    color: $color2;
+    // background: $linear-gradient-bg-3;
+
+    background: $color2;
+
+    color: $color1;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     font-weight: bold;
@@ -104,14 +107,19 @@
     &:first-child::before {
       background-image: url("/assets/images/1-normal.svg");
     }
+    // ("/assets/images/1-normal.svg")
 
     &:hover::before {
-      background-image: url("/assets/images/1-normal-blue.svg");
+      background-image: url("/assets/images/1-normal.svg");
     }
+    // ("/assets/images/1-normal-blue.svg")
 
     &:hover {
-      background: $linear-gradient-bg-3;
-      color: $color2;
+      // background: $linear-gradient-bg-3;
+      // color: $color2;
+      background: $color2;
+      color: $color1;
+
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -148,14 +156,18 @@
     &:first-child::before {
       background-image: url("/assets/images/2-normal-gray.svg");
     }
+    // ("/assets/images/2-normal-gray.svg")
 
     &:first-child:hover::before {
-      background-image: url("/assets/images/2-normal.svg");
+      background-image: url("/assets/images/2-normal-gray.svg");
+      // ("/assets/images/2-normal.svg")
     }
 
     &:hover {
-      background: $linear-gradient-bg-3;
-      color: $color2;
+      // background: $linear-gradient-bg-3;
+      // color: $color2;
+      background: $color2;
+      color: $color1;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -191,15 +203,19 @@
 
     &:first-child::before {
       background-image: url("/assets/images/3-normal.svg");
+      // ("/assets/images/3-normal.svg")
     }
 
     &:first-child:hover::before {
-      background-image: url("/assets/images/3-normal-blue.svg");
+      background-image: url("/assets/images/3-normal.svg");
+      // ("/assets/images/3-normal-blue.svg")
     }
 
     &:hover {
-      background: $linear-gradient-bg-3;
-      color: $color2;
+      // background: $linear-gradient-bg-3;
+      // color: $color2;
+      background: $color2;
+      color: $color1;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -235,15 +251,19 @@
 
     &:first-child::before {
       background-image: url("/assets/images/4-normal.svg");
+      // ("/assets/images/4-normal.svg")
     }
 
     &:first-child:hover::before {
-      background-image: url("/assets/images/4-normal-blue.svg");
+      background-image: url("/assets/images/4-normal.svg");
+      // ("/assets/images/4-normal-blue.svg")
     }
 
     &:hover {
-      background: $linear-gradient-bg-3;
-      color: $color2;
+      // background: $linear-gradient-bg-3;
+      // color: $color2;
+      background: $color2;
+      color: $color1;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -279,15 +299,19 @@
 
     &:first-child::before {
       background-image: url("/assets/images/Chat.svg");
+      // ("/assets/images/Chat.svg")
     }
 
     &:first-child:hover::before {
-      background-image: url("/assets/images/Chat-blue.svg");
+      background-image: url("/assets/images/Chat.svg");
+      // ("/assets/images/Chat-blue.svg")
     }
 
     &:hover {
-      background: $linear-gradient-bg-3;
-      color: $color2;
+      // background: $linear-gradient-bg-3;
+      // color: $color2;
+      background: $color2;
+      color: $color1;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -323,15 +347,19 @@
 
     &:first-child::before {
       background-image: url("/assets/images/bills.svg");
+      // ("/assets/images/bills.svg")
     }
 
     &:first-child:hover::before {
-      background-image: url("/assets/images/bills-blue.svg");
+      background-image: url("/assets/images/bills.svg");
+      // ("")
     }
 
     &:hover {
-      background: $linear-gradient-bg-3;
-      color: $color2;
+      // background: $linear-gradient-bg-3;
+      // color: $color2;
+      background: $color2;
+      color: $color1;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -415,10 +443,12 @@
       }
       &:first-child::before {
         background-image: url("/assets/images/logout.svg");
+        // ("/assets/images/logout.svg")
       }
 
       &:hover::before {
         background-image: url("/assets/images/logout.svg");
+        // ("/assets/images/logout.svg")
       }
     }
   }
