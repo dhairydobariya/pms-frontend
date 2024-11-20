@@ -41,7 +41,7 @@ const Login = () => {
         setError(null);
         toast.success(response.data.message);
         setTimeout(() => {
-          navigate("/"); // Navigate after delay
+          navigate("/dashboard"); // Navigate after delay
         }, 2000);
       }
     } catch (err) {

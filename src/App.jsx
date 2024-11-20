@@ -119,12 +119,20 @@ function App() {
             </PublicRoute>
           }
         />
-        <Route
+        {/* <Route
           path="/dashboard"
           element={
             <PrivateRoute>
               <Dashboard />
             </PrivateRoute>
+          }
+        /> */}
+        <Route
+          path="/dashboard"
+          element={
+            <PublicRoute>
+              <Dashboard />
+            </PublicRoute>
           }
         />
         <Route
