@@ -62,7 +62,7 @@ const PatientForgotPassword = () => {
                       Get OTP
                     </button>
                     <div className="text-center">
-                      <Link to={"/patient-login"} className="main-link mt-3">
+                      <Link to={"/"} className="main-link mt-3">
                         Back to Login
                       </Link>
                     </div>
