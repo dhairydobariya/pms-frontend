@@ -34,6 +34,7 @@ const PatientDetailsEdit = () => {
     }
   };
 
+  
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
 

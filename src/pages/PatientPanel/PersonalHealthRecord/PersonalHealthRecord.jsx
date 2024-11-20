@@ -363,62 +363,62 @@ const PersonalHealthRecord = () => {
                       <div className="row patient-details-box">
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Name</strong>  {hospitals.firstName + " " + hospitals.lastName}
+                            <strong>Name</strong>  {hospitals?.firstName + " " + hospitals?.lastName}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Number</strong> {hospitals.phoneNumber}
+                            <strong>Number</strong> {hospitals?.phoneNumber}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Email</strong> {hospitals.email}
+                            <strong>Email</strong> {hospitals?.email}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Gender</strong> {hospitals.gender}
+                            <strong>Gender</strong> {hospitals?.gender}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>DOB</strong>{hospitals.dateOfBirth}
+                            <strong>DOB</strong>{hospitals?.dateOfBirth}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Age</strong> {hospitals.age}
+                            <strong>Age</strong> {hospitals?.age}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Blood Group</strong> {hospitals.bloodGroup}
+                            <strong>Blood Group</strong> {hospitals?.bloodGroup}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Height (cm)</strong> {hospitals.height}
+                            <strong>Height (cm)</strong> {hospitals?.height}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Weight (kg)</strong> { hospitals.weight}
+                            <strong>Weight (kg)</strong> { hospitals?.weight}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>Country</strong> {hospitals.address.country}
+                            <strong>Country</strong> {hospitals?.address?.country}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>State</strong> {hospitals.address.state}
+                            <strong>State</strong> {hospitals?.address?.state}
                           </p>
                         </div>
                         <div className="col-md-3 col-6 mb-2">
                           <p>
-                            <strong>City</strong> {hospitals.address.city}
+                            <strong>City</strong> {hospitals?.address?.city}
                           </p>
                         </div>
                       </div>
