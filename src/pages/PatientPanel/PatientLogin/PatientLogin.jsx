@@ -157,11 +157,11 @@ const PatientLogin = () => {
                         Doctor-login
                       </Link>
                     </div>
-                    <div className="text-center account-text mt-3">
+                    {/* <div className="text-center account-text mt-3">
                       <Link to={"/login"} className="main-link ms-1">
                         Admin-login
                       </Link>
-                    </div>
+                    </div> */}
                   </Form>
                 )}
               </Formik>
